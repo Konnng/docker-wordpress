@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-ARG CACHE_DATE=201702082234
+ARG CACHE_DATE=20170403
 ARG DEBIAN_FRONTEND=noninteractive
 ENV LANG=en_US.UTF-8
 
@@ -27,6 +27,9 @@ ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOCK_DIR=/var/lock/apache2
 ENV APACHE_RUN_DIR=/var/run/apache2
 ENV APACHE_PID_FILE=/var/run/apache2.pid
+# Uncomment line below to use enviroment variable in your application (feel free to change the value too)
+# ENV APPLICATION_ENV=docker
+
 RUN usermod -u 1000 www-data
 
 EXPOSE 80
