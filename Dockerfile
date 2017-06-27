@@ -11,7 +11,7 @@ RUN add-apt-repository -y ppa:ondrej/php
 RUN apt-get update
 
 RUN apt-get install -yq vim zip curl apache2 mysql-client
-RUN apt-get install -yq php5.6 php5.6-cli=5.6.30-1+deb.sury.org~xenial+1 php5.6-dev php5.6-mysql php5.6-mcrypt php5.6-gd libapache2-mod-php5.6
+RUN apt-get install -yq php5.6 php5.6-cli php5.6-dev php5.6-mysql php5.6-mcrypt php5.6-gd libapache2-mod-php5.6
 RUN apt-get install -yq php5.6 php5.6-curl php5.6-mbstring php5.6-xml php5.6-xmlrpc
 RUN apt-get install -yq php-ssh2
 

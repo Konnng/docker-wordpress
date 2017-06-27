@@ -10,6 +10,7 @@ services:
       - db
   db:
     image: mysql
+    command: command:  mysqld --secure-file-priv="" --max_allowed_packet=256M --innodb-buffer-pool-size=256M --key_buffer_size=32M --query_cache_type=1 --query_cache_size=32M --query_cache_limit=4M
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: wordpress
