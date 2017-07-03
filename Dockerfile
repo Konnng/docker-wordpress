@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-ARG CACHE_DATE=20170403
+ARG CACHE_DATE=20170703
 ARG DEBIAN_FRONTEND=noninteractive
 ENV LANG=en_US.UTF-8
 
@@ -8,7 +8,7 @@ RUN export LANG=en_US.UTF-8
 RUN apt-get update
 RUN apt-get -yq install python-software-properties software-properties-common
 RUN add-apt-repository -y ppa:ondrej/php
-RUN apt-get update
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 
 RUN apt-get install -yq vim zip curl apache2 mysql-client
 RUN apt-get install -yq php5.6 php5.6-cli php5.6-dev php5.6-mysql php5.6-mcrypt php5.6-gd libapache2-mod-php5.6

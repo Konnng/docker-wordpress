@@ -11,4 +11,4 @@ fi
 
 rm -f "$APACHE_PID_FILE"
 
-tail -F /var/log/apache2/* & exec apache2 -D FOREGROUND
+tail -F /var/log/apache2/error.log & exec apache2 -D FOREGROUND
