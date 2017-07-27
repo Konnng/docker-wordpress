@@ -7,9 +7,9 @@ RUN locale-gen en_US.UTF-8
 RUN export LANG=en_US.UTF-8
 
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils \
-	&& apt-get -yq install python-software-properties software-properties-common
-RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
-  && apt-get install -yq vim zip curl apache2 mysql-client \
+	&& apt-get -yq install python-software-properties software-properties-common \
+	&& add-apt-repository -y ppa:ondrej/php
+RUN apt-get update && apt-get install -yq vim zip curl apache2 mysql-client \
  	&& php5.6 php5.6-cli php5.6-dev php5.6-mysql php5.6-mcrypt php5.6-gd libapache2-mod-php5.6 \
  	&& apt-get install -yq php5.6 php5.6-curl php5.6-mbstring php5.6-xml php5.6-xmlrpc \
 	&& apt-get install -yq php-ssh2
