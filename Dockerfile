@@ -14,7 +14,7 @@ RUN apt-get install -yq php5.6 php5.6-cli php5.6-dev php5.6-mysql php5.6-mcrypt 
  	&& apt-get install -yq php5.6 php5.6-curl php5.6-mbstring php5.6-xml php5.6-xmlrpc \
 	&& apt-get install -yq php-ssh2
 
-RUN a2enmod rewrite expires setemnvif deflate headers filter include \
+RUN a2enmod rewrite expires setenvif deflate headers filter include \
 	&& echo "ServerName localhost" >> /etc/apache2/apache2.conf \
 	&& sed -i "s/<\/VirtualHost>/\n\t<Directory \/var\/www\/html>\n\t\tOptions Indexes FollowSymLinks\n\t\tAllowOverride All\n\t\tRequire all granted\n\t<\/Directory>\n\n<\/VirtualHost>/g" /etc/apache2/sites-enabled/000-default.conf
 
