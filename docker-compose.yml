@@ -2,10 +2,11 @@
 version: "3.2"
 services:
   web:
+    container_name: web
     build:
       context: .
       args:
-        CACHE_DATE: "20171020"
+        CACHE_DATE: "20180418"
         APACHE_PORT: "80"
         DEBIAN_FRONTEND: "noninteractive"
         APACHE_RUN_USER: "www-data"
@@ -28,6 +29,7 @@ services:
       # arquivo de log do FreeTDS (conector do SQL Server p/ o Cordilheira)
       TDSDUMP: "/tmp/freetds.log"
   db:
+    container_name: db
     image: mysql:5.6
     command: mysqld --max_allowed_packet=256M --innodb-buffer-pool-size=256M --key_buffer_size=32M --query_cache_type=1 --query_cache_size=32M --query_cache_limit=4M --secure-file-priv=""
     environment:
