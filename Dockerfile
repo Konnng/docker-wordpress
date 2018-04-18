@@ -14,7 +14,7 @@ RUN locale-gen en_US.UTF-8 && export LANG=en_US.UTF-8
 RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
   && apt-get install -yq vim zip curl apache2 mysql-client
 RUN apt-get install -yq php5.6 php5.6-cli php5.6-dev php5.6-mysql php5.6-mcrypt php5.6-gd libapache2-mod-php5.6 \
-	php5.6 php5.6-curl php5.6-mbstring php5.6-xml php5.6-xmlrpc php5.6-ssh2 php5.6-exif
+	php5.6 php5.6-curl php5.6-mbstring php5.6-xml php5.6-xmlrpc php5.6-ssh2 php5.6-exif php5.6-soap
 
 RUN a2enmod rewrite expires setenvif deflate headers filter include \
 	&& echo "ServerName localhost" >> /etc/apache2/apache2.conf \
