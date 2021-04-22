@@ -27,9 +27,9 @@ Pre-configured docker image to run wordpress sites.
 └── php.ini
 ```
 
-* `**data**` - data files, like mysql data files and `/tmp` directory.
-* `**www**` - wordpress install directory. If empty, it will download a fresh copy of wordpress. You can use your own wordpress install/files.
-* `**php.ini**` Custom PHP configuration file, you can update or add new values here to overwrite default PHP config.
+* **data** - data files, like mysql data files and `/tmp` directory.
+* **www** - wordpress install directory. If empty, it will download a fresh copy of wordpress. You can use your own wordpress install/files.
+* **php.ini** Custom PHP configuration file, you can update or add new values here to overwrite default PHP config.
 
 ### Setup
 
